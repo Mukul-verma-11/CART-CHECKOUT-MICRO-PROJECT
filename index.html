@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<script src="index.js"></script>
+
+<body>
+
+    <div class="box">
+        <div class="left">
+            <img id="img" src="/img/black.jpg" alt="">
+        </div>
+
+        <div class="right">
+            <label for="">
+                <h2>COLOR</h2>
+            </label> <br>
+            <Select id="color" onchange="shirt_color()" name="color">
+                <option>
+                    click here to select color
+                </option>
+                <option value="500">
+                    black
+                </option>
+                <option value="600">
+                    blue
+                </option>
+                <option value="700">
+                    white
+                </option>
+            </Select>
+            <br>
+            <label for="">
+                <h2>SIZE</h2>
+            </label> <br>
+            <Select id="size" onchange="shirt_size()" name="size">
+                <option>
+                    click here to select size
+                </option>
+                <option value="5">
+                    S
+                </option>
+                <option value="10">
+                    L
+                </option>
+                <option value="20">
+                    XL
+                </option>
+            </Select>
+            <br> <br>
+            <div>
+                <h2>QUANTITY</h2>
+            </div>
+            <div class="no_of_items">
+                <button class="btn" onclick="minus_counter()" id="minus">-</button>
+                <div id="counter">1</div>
+                <button class="btn" onclick="plus_counter()" id="plus">+</button>
+            </div>
+            <br> <br>
+
+            <div class="price">
+                <h2>PRICE</h2>
+            </div>
+            <div style="width: 100px;color:black; height: 40px; border: 2px solid black;">
+                <h1 id="price_of_item">000</h1>
+            </div>
+            <br> <br>
+            <button id="buy" onclick="bought()" style="width: 200px; height: 50px;">Buy Now</button>
+
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
